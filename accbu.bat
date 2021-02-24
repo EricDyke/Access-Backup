@@ -2,7 +2,7 @@
 setlocal EnableDelayedExpansion
 
 :: Loop through each item in backup list [file, backup_dir]
-for /f "usebackq tokens=1-4 delims=," %%a in ("accbu_list.csv") do (
+for /f "usebackq tokens=1-4 delims=," %%a in ("%~dp0%\accbu_list.csv") do (
 		set filedir=%%~pa
 		set filename=%%~na
 		
